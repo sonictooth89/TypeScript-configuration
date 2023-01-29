@@ -1,0 +1,21 @@
+{
+  "name": "typescript-exercise",
+  "version": "1.0.0",
+  "description": "## Table of content * [General info](#general-info) * [Subject of exercise](#subject-of-exercise) * [Technologies](#technologies) * [Setup](#setup)",
+  "main": "app.js",
+  "scripts": {
+    "build": "tsc --build",
+    "clean": "tsc --build --clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sonictooth89/TypeScript-configuration.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sonictooth89/TypeScript-configuration/issues"
+  },
+  "homepage": "https://github.com/sonictooth89/TypeScript-configuration#readme"
+}
