@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./", //base path for configuration
+        "target": "ES6",
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "strict": true,
+        "skipLibCheck": true,
+        "module": "commonjs",
+        "outDir": "./dist/", //path of result files
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "sourceMap": true,
+        "preserveConstEnums": true,
+        "noImplicitAny": true, //forcing types
+        "downlevelIteration": true,
+        "moduleResolution": "Node",
+        "removeComments": true, //remov all comments
+        "lib": [
+            "es6",
+            "dom.iterable",
+            "dom"
+        ]
+    }
+}
