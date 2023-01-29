@@ -10,81 +10,65 @@
 This project is an exercise from backend programmign in javascript
 
 ## Procedure of TypeScript configuration
-1. Global install of TypeScript:
+1. Intitialize package.json:
+```
+npm init -y
+```
+2. Global install of TypeScript:
 ```
 npm install -g typescript
 ```
-2. Make two files: html and ts with code.
+3. Create two files: html and ts with code.
 
-3. Write in console:
+4. Write in console:
 ```
 tsc app.ts
 ```
 it is creating a js file with our code
 
-____________________________________
-# Political Speeches - Exercise
-
-## Table of content
-* [General info](#general-info)
-* [Subject of exercise](#subject-of-exercise)
-* [Technologies](#technologies)
-* [Setup](#setup)
-
-## General info
-This project is an exercise from backend programmign in javascript
-
-## Subject of exercise
-Environment
-This exercise should be solved with Node.js >= 16 and its available features. TypeScript
-implementation is preferred over plain JavaScript, but no requirement.
-The solution should include the full source code and any script or instruction necessary for executing/running the app. There are no restrictions regarding used libraries.
-
-Exercise: Political Speeches
-The goal of this exercise is to calculate some statistics from given input data about
-political speeches. The application should handle CSV files (UTF-8 encoded), structured as below:
-```
-Speaker, Topic, Date, Words
-Alexander Abel, Education Policy, 2012-10-30, 5310 
-Bernhard Belling, Coal Subsidies, 2012-11-05, 1210 
-Caesare Collins, Coal Subsidies, 2012-11-06, 1119 
-Alexander Abel, Internal Security, 2012-12-11, 911
-```
-The application should provide an HTTP endpoint which accepts one or more given URLs (http and https) via query parameters at the path:
-GET /evaluation?url=url1&url=url2
-
-The provided CSV files at these URLs should be downloaded, processed and evaluated to answer the following questions:
-1. Which politician gave the most speeches in 2013?
-2. Which politician gave the most speeches on the topic „Internal Security"?
-3. Which politician used the fewest words (in total)?
-
-The answers should be provided as JSON. If a question cannot be answered or does not
-have an unambiguous solution the result for this field should be null.
-
-As an example, for the given input above the expected result is:
+5. Create file tsconfig.json
 ```
 {
-"mostSpeeches": null,
-"mostSecurity": "Alexander Abel",
-"leastWordy": "Caesare Collins"
+    "compilerOptions": {
+        "baseUrl": "./", //base path for configuration
+        "target": "ES6",
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "strict": true,
+        "skipLibCheck": true,
+        "module": "commonjs",
+        "outDir": "./dist/", //path of result files
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "sourceMap": true,
+        "preserveConstEnums": true,
+        "noImplicitAny": true, //forcing types
+        "downlevelIteration": true,
+        "moduleResolution": "Node",
+        "removeComments": true, //remov all comments
+        "lib": [
+            "es6",
+            "dom.iterable",
+            "dom"
+        ]
+    }
 }
 ```
-## Technologies
-Project is created with:
-* node.js v18.13.0
 
-## Setup
-To run this project. install it locally using npm:
+6. Added scripts into a package.json:
 ```
-$ cd ../PoliticalSpeeches
-$ npm install
-$ npm start
+"scripts": {
+  "build": "tsc --build",
+  "clean": "tsc --build --clean"
+},
+```
+for webpack:
+```
+"scripts": {
+   "build": "webpack-cli app.tsx --config webpack-config.js"
+}
 ```
 
-In lokal host for version with fs.readFile and fs.write file:
-```
-http://localhost:3000/evaluation?url=speech1&url=speech3&url=speech2
-```
 
 
 
