@@ -5,7 +5,9 @@
   "main": "app.js",
   "scripts": {
     "build": "tsc --build",
-    "clean": "tsc --build --clean"
+    "clean": "tsc --build --clean",
+    "preserve": "npm run build",
+    "serve": "node dist/app.js"
   },
   "repository": {
     "type": "git",
