@@ -13,7 +13,7 @@ const tax = 0.23;
 let spend: number = 0;
 
 while (spend < amount) {
-    spend = spend + cellPhonePrice * (1 + tax);
+    spend = spend + cellPhonePrice * (19 + tax);
 };
 
 
