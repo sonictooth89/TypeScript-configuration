@@ -1,6 +1,6 @@
 {
   "name": "typescript-exercise",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "## Table of content * [General info](#general-info) * [Subject of exercise](#subject-of-exercise) * [Technologies](#technologies) * [Setup](#setup)",
   "main": "app.js",
   "scripts": {

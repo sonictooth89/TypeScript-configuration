@@ -59,7 +59,9 @@ it is creating a js file with our code
 ```
 "scripts": {
   "build": "tsc --build",
-  "clean": "tsc --build --clean"
+  "clean": "tsc --build --clean",
+  "preserve": "npm run build",
+  "serve": "node dist/index.js"
 },
 ```
 for webpack:
@@ -68,7 +70,10 @@ for webpack:
    "build": "webpack-cli app.tsx --config webpack-config.js"
 }
 ```
-
+7. Instalation Expres.js
+```
+npm i @types/express @types/node
+```
 
 
 
